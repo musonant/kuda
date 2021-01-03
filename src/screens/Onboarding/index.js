@@ -19,7 +19,7 @@ const Onboarding = ({ navigation }) => {
         />
         <Text style={styles.titleText}>Welcome to your freedom</Text>
         <Button
-          onPress={() => navigation.navigate('')}
+          onPress={() => navigation.navigate('RegisterEmail')}
           title="Join Kuda"
           containerStyle={styles.actionButton}
         />
