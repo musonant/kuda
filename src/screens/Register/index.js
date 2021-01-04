@@ -10,13 +10,13 @@ import Input from '../../components/TextInput';
 import styles from './styles';
 
 const RegisterEmail = ({ navigation }) => {
-  const [canProceed, setCanProceed] = useState(false);
+  const [canProceed, setCanProceed] = useState(true);
 
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => (
         <Button
-          onPress={() => navigation.navigate('')}
+          onPress={() => navigation.navigate('RegisterBvn')}
           title="Next"
           type={canProceed ? 'inline' : 'inline-disabled'}
           disabled={!canProceed}
@@ -36,7 +36,9 @@ const RegisterEmail = ({ navigation }) => {
   });
 
   return (
-    <KeyboardAwareScrollView automaticallyAdjustContentInsets={false}>
+    <KeyboardAwareScrollView
+      keyboardShouldPersistTaps="handled"
+      automaticallyAdjustContentInsets={false}>
       <View style={styles.contentContainer}>
         <Text style={styles.title}>Start</Text>
         <Text style={styles.bodyText}>
@@ -63,7 +65,6 @@ const RegisterEmail = ({ navigation }) => {
 
             return (
               <>
-                {console.log('errors', errors)}
                 <Input
                   placeholder="Email Address"
                   autoCapitalize="none"

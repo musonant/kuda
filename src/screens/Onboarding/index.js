@@ -23,7 +23,7 @@ const Onboarding = ({ navigation }) => {
           title="Join Kuda"
           containerStyle={styles.actionButton}
         />
-        <Pressable onPress={() => navigation.navigate('')}>
+        <Pressable onPress={() => navigation.navigate('SignIn')}>
           <Text style={styles.moreActionText}>
             Have an Account? <Text style={styles.green}>Sign in</Text>
           </Text>
